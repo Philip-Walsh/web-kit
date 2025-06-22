@@ -1,11 +1,11 @@
-const scripts = [
+export const scripts = [
   "utils",
   "extra"
 ];
 
 console.log("🚀 manifest.js loaded. Scripts available:", scripts);
 
-async function loadAllScripts() {
+export async function asyncRun() {
   for (const script of scripts) {
     try {
       await import(`https://cdn.jsdelivr.net/gh/Philip-Walsh/web-kit@main/js/${script}.js`);
@@ -15,7 +15,3 @@ async function loadAllScripts() {
     }
   }
 }
-
-loadAllScripts();
-
-export { scripts };

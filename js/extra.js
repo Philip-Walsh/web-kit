@@ -1,7 +1,11 @@
 console.log("🚀 extra.js loaded successfully!");
 
-function showAlert(message = "Extra JS is alive!") {
-  alert(message);
-}
+export function run() {
+  alert("🚀 extra.js loaded and run!");
+  console.log("extra.js run() executed");
 
-showAlert();
+  function showAlert(message = "Extra JS is alive!") {
+    alert(message);
+  }
+
+}
