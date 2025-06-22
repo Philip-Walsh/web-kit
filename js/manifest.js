@@ -1,6 +1,5 @@
 const scripts = [
   "utils",
-  "loader",
   "extra"
 ];
 
