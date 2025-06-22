@@ -1,6 +1,6 @@
 # 🚀 web-kit
 
-A sleek collection of reusable JavaScript ⚙️ utilities and CSS 🎨 layouts — plug-and-play via CDN or local.
+A collection of reusable JavaScript ⚙️ utilities and CSS 🎨 layouts — plug-and-play via CDN or local.
 
 ---
 
