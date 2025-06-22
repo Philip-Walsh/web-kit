@@ -1,6 +1,9 @@
 export const scripts = [
-  "utils",
-  "extra"
+    "clock",
+    "extra",
+    "randomColor",
+    "randomEmoji",
+    "surprise",
 ];
 
 console.log("🚀 manifest.js loaded. Scripts available:", scripts);
