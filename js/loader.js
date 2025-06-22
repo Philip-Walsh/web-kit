@@ -1,0 +1,1 @@
+async function loadAsset(path, type = "js") { const url = `https://cdn.jsdelivr.net/gh/Philip-Walsh/web-kit@main/${path}`; if (type === "js") { const s = document.createElement("script"); s.src = url; document.head.appendChild(s); } else if (type === "css") { const l = document.createElement("link"); l.rel = "stylesheet"; l.href = url; document.head.appendChild(l); } }
