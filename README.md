@@ -6,13 +6,13 @@ A sleek collection of reusable JavaScript ⚙️ utilities and CSS 🎨 layouts 
 
 ## 🌐 CDN Access
 
-Use this pattern to load files via jsDelivr:
+Files are hosted on jsDelivr CDN, accessible with this URL pattern:
 
-```
-https://cdn.jsdelivr.net/gh/Philip-Walsh/web-kit@main/path/to/file
-```
+\```
+https://cdn.jsdelivr.net/gh/Philip-Walsh/web-kit@main/<file-path>
+\```
 
-Replace `path/to/file` with your file’s path.
+Use the `<file-path>` matching the directory and filename, like `js/utils.js` or `layout/base.css`.
 
 ---
 
@@ -20,36 +20,59 @@ Replace `path/to/file` with your file’s path.
 
 ### Load JS
 
-```html
+\```html
 <script src="https://cdn.jsdelivr.net/gh/Philip-Walsh/web-kit@main/js/utils.js"></script>
-```
+\```
 
 ### Load CSS
 
-```html
+\```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Philip-Walsh/web-kit@main/layout/base.css" />
-```
+\```
+
+---
+
+## 🛠️ Utility Script
+
+We provide a small helper script to fetch and load assets dynamically if you prefer programmatic control:
+
+\```js
+async function loadAsset(path, type = 'js') {
+  const url = `https://cdn.jsdelivr.net/gh/Philip-Walsh/web-kit@main/${path}`;
+  if (type === 'js') {
+    const script = document.createElement('script');
+    script.src = url;
+    document.head.appendChild(script);
+  } else if (type === 'css') {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = url;
+    document.head.appendChild(link);
+  }
+}
+\```
+
+Use it like:
+
+\```js
+loadAsset('js/utils.js');
+loadAsset('layout/base.css', 'css');
+\```
 
 ---
 
 ## 📁 Structure
 
-```
+\```
 web-kit/
-├── js/
-├── layout/
-├── components/  (coming soon)
+├── js/           # JavaScript utilities and components
+├── layout/       # CSS layout and style assets
+├── components/   # Coming soon
 └── README.md
-```
+\```
 
 ---
 
 ## 🤝 Contribute
 
-PRs & issues welcome!
-
----
-
-## 📝 License
-
-MIT — use it freely.
+Issues and PRs welcome!
