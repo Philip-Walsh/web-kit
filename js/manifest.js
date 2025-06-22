@@ -1,8 +1,8 @@
 export const scripts = [
     "clock",
     "extra",
-    "randomColor",
-    "randomEmoji",
+    "random-color",
+    "random-emoji",
     "surprise",
 ];
 
